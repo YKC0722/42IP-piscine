@@ -1,16 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_numbers.c                                 :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/01 20:22:42 by cyeu-kan          #+#    #+#             */
+/*   Updated: 2024/10/01 21:51:01 by cyeu-kan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include<unistd.h>
 
-void ft_print_numbers(void)
+void	ft_print_numbers(void)
 {
+	int	i;
 
-       for(int i = '1'; i <= '9'; i++)
-       {
-	       write(1, &i,1);
-       }
-
+	i = '1';
+	while (i <= '9')
+	{
+		write(1, &i, 1);
+		i++;
+	}
 }
 
-int main(void)
+/*int	main(void)
 {
-             ft_print_numbers();
-}
+	ft_print_numbers();
+	return (0);
+}*/
