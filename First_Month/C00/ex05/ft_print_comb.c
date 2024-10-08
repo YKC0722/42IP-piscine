@@ -36,18 +36,17 @@ void	ft_print_comb(void)
 				ft_putchar(j + '0');
 				ft_putchar(k + '0');
 				if (!(i == 7 && j == 8 && k == 9))
+				{
 					ft_putchar(',');
-				ft_putchar(' ');
-				k++;
-			}
-			j++;
-		}
-		i++;
+					ft_putchar(' ');
+				} k++;
+			} j++;
+		} i++;
 	}
 }
 
-/*int	main(void)
+int	main(void)
 {
 	ft_print_comb();
 	return (0);
-}*/
+}
