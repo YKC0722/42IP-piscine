@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 19:14:09 by cyeu-kan          #+#    #+#             */
+/*   Updated: 2024/10/09 19:19:15 by cyeu-kan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include<unistd.h>
 
-char	*ft_strncpy(char	*dest, char	*src, unsigned int	n)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
 	unsigned int	i;
 
@@ -18,12 +30,12 @@ char	*ft_strncpy(char	*dest, char	*src, unsigned int	n)
 	return (dest);
 }
 
-void	ft_putstr(char *str)
+/*void	ft_putstr(char *str)
 {
 	int	i;
-	
+
 	i = 0;
-	while(str[i] != '\0')
+	while (str[i] != '\0')
 		i++;
 	write(1, str, i);
 }
@@ -35,10 +47,9 @@ int	main(void)
 	int	n;
 
 	n = 30;
-	ft_putstr(src);
+	ft_putstr(dest);
 	ft_strncpy(dest, src, n);
 	ft_putstr(dest);
 	write(1, "\n", 1);
-
 	return (0);
-}
+}*/

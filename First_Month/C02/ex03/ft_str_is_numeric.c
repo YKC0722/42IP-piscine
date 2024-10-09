@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 19:24:28 by cyeu-kan          #+#    #+#             */
+/*   Updated: 2024/10/09 19:25:19 by cyeu-kan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include<unistd.h>
 
 int	ft_str_is_numeric(char *str)
@@ -8,14 +20,14 @@ int	ft_str_is_numeric(char *str)
 	{
 		if (!(*str >= '0' && *str <= '9'))
 		{
-			return 0;
+			return (0);
 		}
 		str++;
 	}
 	return (1);
 }
 
-void	ft_putstr(char *str)
+/*void	ft_putstr(char *str)
 {
 	int	i;
 
@@ -69,4 +81,4 @@ int	main(void)
         write(1, &resultb, 1);
         write(1, "\n", 1);
 	return (0);
-}
+}*/

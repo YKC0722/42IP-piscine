@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/09 19:31:04 by cyeu-kan          #+#    #+#             */
+/*   Updated: 2024/10/09 19:31:41 by cyeu-kan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include<unistd.h>
 
 char	*ft_strupcase(char *str)
@@ -10,14 +22,13 @@ char	*ft_strupcase(char *str)
 		if (str[i] >= 'a' && str[i] <= 'z')
 		{
 			str[i] = str[i] - 32;
-
 		}
 		i++;
 	}
 	return (str);
 }
 
-void	ft_putstr(char *str)
+/*void	ft_putstr(char *str)
 {
 	int	i;
 
@@ -37,4 +48,4 @@ int	main(void)
 	ft_putstr(str);
         write(1, "\n", 1);
 	return (0);
-}
+}*/
