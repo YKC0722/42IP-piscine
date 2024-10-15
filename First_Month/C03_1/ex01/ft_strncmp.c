@@ -6,7 +6,7 @@
 /*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:35:05 by cyeu-kan          #+#    #+#             */
-/*   Updated: 2024/10/14 16:51:36 by cyeu-kan         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:47:15 by cyeu-kan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,15 @@
 
 int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (i < n && (s1[i] != '\0' || s2[i] != '\0'))
+	while (n && *s1 && (*s1 == *s2))
 	{
-		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		i++;
+		s1++;
+		s2++;
+		n--;
 	}
-	return (0);
+	if (n == 0)
+		return (0);
+	return (*s1 - *s2);
 }
 
 /*
@@ -60,5 +59,4 @@ int	main(int argc, char *argv[])
 	ft_putnbr(res);
 	write(1, "\n", 1);
 	return (0);
-}
-*/
+}*/

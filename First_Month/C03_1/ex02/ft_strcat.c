@@ -6,23 +6,21 @@
 /*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:35:05 by cyeu-kan          #+#    #+#             */
-/*   Updated: 2024/10/14 17:57:37 by cyeu-kan         ###   ########.fr       */
+/*   Updated: 2024/10/15 15:53:11 by cyeu-kan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include<unistd.h>
 
-/*
 int	ft_strlen(char *str)
 {
-	int     i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 		i++;
 	return (i);
 }
-*/
 
 char	*ft_strcat(char *dest, char *src)
 {
