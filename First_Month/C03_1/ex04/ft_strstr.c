@@ -6,7 +6,7 @@
 /*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 17:13:28 by cyeu-kan          #+#    #+#             */
-/*   Updated: 2024/10/15 18:05:25 by cyeu-kan         ###   ########.fr       */
+/*   Updated: 2024/10/17 17:56:06 by cyeu-kan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,43 +14,42 @@
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	char	*s;
-	char	*t;
+	int	i;
+	int	j;
 
-	while (*str != '\0')
+	i = 0;
+	j = 0;
+	if (to_find[0] == '\0')
+		return (str);
+	while (str[1] != '\0')
 	{
-		s = str;
-		t = to_find;
-		while (*s && *t && (*s == *t))
+		while (str[i + j] == to_find[j] && to_find[j] != '\0')
 		{
-			s++;
-			t++;
+			j++;
 		}
-		if (*t == '\0')
-		{
-			return (str);
-		}
-		str++;
+		if (to_find[j] == '\0')
+			return (str + i);
+		i++;
+		j = 0;
 	}
 	return (0);
 }
 /*
-void ft_putstr(char *str) {
+void ft_putstr(char *str)
+{
     while (*str) {
         write(1, str, 1);
         str++;
     }
 }
 
-int main(int argc, char *argv[]) {
-    if (argc != 3) {
-        write(1, "Error\n", 6);
-        return 1;
-    }
-
-    char *haystack = argv[1];
-    char *needle = argv[2];
-    char *result = ft_strstr(haystack, needle);
+int main(int argc, char *argv[])
+{
+	if (argc < 2)
+		return (0);
+    char *String = argv[1];
+    char *find = argv[2];
+    char *result = ft_strstr(String, find);
 
     if (result) {
         write(1, "Substring found: ", 17);

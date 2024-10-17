@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: cyeu-kan <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/17 16:31:36 by cyeu-kan          #+#    #+#             */
+/*   Updated: 2024/10/17 16:36:25 by cyeu-kan         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
 void	ft_swap(char **a, char **b)
@@ -31,7 +43,7 @@ void	ft_putstr(char *str)
 	}
 }
 
-int	main(int argc, char ** argv)
+int	main(int argc, char **argv)
 {
 	int	i;
 	int	j;
@@ -50,7 +62,6 @@ int	main(int argc, char ** argv)
 		}
 		i++;
 	}
-
 	i = 1;
 	while (i < argc)
 	{
